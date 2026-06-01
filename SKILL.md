@@ -1,6 +1,6 @@
 ---
 name: wechat-article-review
-description: Review Chinese WeChat Official Account articles for compliance, factual sourcing, originality risk, title safety, formatting, AI-disclosure, and publish readiness. Use when the user asks for 公众号审核, 微信公众号文章审核, wechat article review, pre-publish review, risk scan, or wants an article checked before rendering or publishing.
+description: Review Chinese WeChat Official Account articles for compliance, factual sourcing, originality risk, title safety, formatting, AI-disclosure, and publish readiness, with Chinese/English output switching. Use when the user asks for 公众号审核, 微信公众号文章审核, wechat article review, pre-publish review, risk scan, or wants an article checked before rendering or publishing.
 ---
 
 # WeChat Article Review
@@ -8,6 +8,19 @@ description: Review Chinese WeChat Official Account articles for compliance, fac
 ## Purpose
 
 Use this skill only to review article content. Do not generate images, render HTML, upload assets, or publish.
+
+## Bilingual Skill Brief
+
+中文说明：这个 skill 用于公众号文章发布前审核，重点检查事实来源、原创与转载风险、标题安全、敏感表达、投资/政策/安全等高风险内容、AI 声明和排版完整性。它只给出审核结论、必须修改项、优化建议和可替换标题，不负责生成配图、渲染 HTML 或发布。
+
+English brief: This skill reviews WeChat Official Account articles before publishing. It checks factual sourcing, originality and reposting risk, title safety, sensitive wording, finance/policy/security risk, AI disclosure, and formatting readiness. It returns a verdict, required fixes, suggested polish, and safer title options; it does not generate images, render HTML, or publish.
+
+## Language Mode
+
+- Default to the user's language: Chinese requests receive Chinese reviews; English requests receive English reviews.
+- Switch explicitly when asked: `中文`, `English`, `bilingual`, `中英双语`, `respond in English`, or `用中文审核`.
+- In bilingual mode, keep the verdict and checklist once, then provide each finding as `中文 / English` pairs.
+- Keep technical verdict tokens unchanged in all languages: `PASS`, `FIX_BEFORE_PUBLISH`, and `BLOCK`.
 
 ## Workflow
 

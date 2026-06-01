@@ -1,4 +1,4 @@
 interface:
-  display_name: "公众号文章审核"
-  short_description: "Review WeChat articles for compliance risks"
-  default_prompt: "Use $wechat-article-review to review this article before publishing."
+  display_name: "公众号文章审核 / WeChat Review"
+  short_description: "Bilingual WeChat compliance review"
+  default_prompt: "Use $wechat-article-review to review this article and respond in the requested language."
